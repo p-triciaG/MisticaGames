@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Carrinho</title>
+
+	<meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<style type="text/css">
+		/* Essa classe serve para alinhar os botões de deletar itens do carrinho*/
+		table .my_btn_and_input_align{
+			vertical-align: middle;
+			text-align: center;
+		}
+
+		/*Aqui é o controle da aparência dos botões de mais e menos, tanto estática quanto no hover do mouse*/
+		.btn-outline-primary{
+			color:  #a154a5;
+			border-color:  #a154a5;
+		}
+		.btn-outline-primary:hover{
+			background-color: #a154a5;
+		}
+
+		.btn-primary{
+			background-color: #ffa74a;
+			border-color: #a154a5;
+		}
+		.btn-primary:hover{
+			background-color: #a154a5;
+		}
+
+		#hrow{
+			background-color: #dedede;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<header style="background-color: #4b1749">
+        <div class="row justify-content-between m-0">
+          <div class="col-sm-4 mt-2">
+              <img src="img/logo-mistica.png" class="img-fluid" alt="gameStoreLogo" >
+          </div>
+          <div class="col-sm-4 align-self-center">
+              <form class="form-inline ">
+                  <input class="form-control mr-2 " type="search" placeholder="Buscar...">
+                  <button class="btn btn-outline-light" type="submit">OK</button>
+              </form>
+          </div>
+           
+       </div>
+   </header>    
+
+   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3f133d">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+           <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSite">
+              <ul class="navbar-nav mr-auto ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Categorias</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Sobre nós</a>
+                  </li>
+              </ul>           
+         </div>  
+    </nav>
+
+	<div class='container'>    <!-- Container que contem a tabela do carrinho-->
+		<table class='table table-bordered mt-5'>
+			<thead>
+				<tr>
+					<div class='row'> <!-- Primeira linha da tabela, contém os títulos-->
+						<div class='col-sm-3'>
+							<th class='align-middle' id='hrow'> <!-- Foi necessário usar a classe align-middle e uma correção de padding top 4 (pt-4 abaixo) para centralizar os itens dentro das células da tabela, não sei porque-->
+								<p class='d-flex justify-content-center pt-4'>Image</p>
+							</th>
+						</div>
+						<div class='col-sm-4'>
+							<th class='align-middle' id='hrow'>
+								<p class='d-flex justify-content-center pt-4'>Product</p>
+							</th>
+						</div>
+						<div class='col-sm-2'>
+							<th class='align-middle' id='hrow'> 
+								<p class='d-flex justify-content-center pt-4'>Quantity</p>
+							</th>
+						</div>
+						<div class='col-sm-2'>
+							<th class='align-middle' id='hrow'>
+								<p class='d-flex justify-content-center pt-4'>Total</p>
+							</th>
+						</div>
+						<div class='col-sm-1'>
+							<th class='align-middle' id='hrow'>
+								<p class='d-flex justify-content-center pt-4'>Remove</p>
+							</th>
+						</div>
+					</div>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<div class='row'> <!-- Segunda linha da tabela, contém os itens que o usuário adicionar, falta dinamizar com js-->
+						<div class='col-sm-3'>
+							<td>
+								<div class='d-flex justify-content-center'> <!-- Esse div contém as classes para alinhar a imagem no meio da célula-->
+									<div class="card" style="width: 4rem;"> <!-- Inseri as imagens dentro de cards do bootstrap para conter o tamanho delas, falta dinamizar o hover e o click com js-->
+			  							<img class="card-img-top" src="img/produtos/burning_tree_emissary.jpeg" alt="Burning-Tree Emissary">
+									</div>
+								</div>
+							</td>
+						</div>
+						<div class='col-sm-4'>
+							<td class='align-middle'>
+								<p class='d-flex justify-content-center pt-4'>Burning-Tree Emissary</p> <!-- js pendente-->
+							</td>
+						</div>
+						<div class='col-sm-2'>
+							<td>
+								<div class='d-flex justify-content-center pt-4'> <!-- Também tive que usar o pt-4 pra centralizar o conteúdo do input group aqui, js pendente-->
+										<div class='input-group mb-3' style='max-width: 120px'>
+											<div class='input-group-prepend'>
+												<button class='btn btn-outline-primary js-btn-minus'>-</button> <!-- Falta dinamizar com js-->
+											</div>
+											<input type="text" class='form-control text-center' value='1' placeholder=''>
+											<div class='input-group-append'>
+												<button class='btn btn-outline-primary js-btn-minus'>+</button>  <!-- Falta dinamizar com js-->
+											</div>
+										</div>
+									</div>
+							</td> 
+						</div>
+						<div class='col-sm-2'>
+							<td class='align-middle'>
+								<div class='d-flex justify-content-center pt-4'>
+									<p>R$ 10,00</p>
+								</div>
+							</td>
+						</div>
+						<div class='col-sm-1'>
+							<td class='my_btn_and_input_align'>
+								<a href="" class='btn btn-primary btn-sm'>X</a>
+							</td>
+						</div>
+					</div>	
+				</tr>
+
+				<tr>
+					<div class='row'>
+						<div class='col-sm-3'>
+							<td>
+								<div class='d-flex justify-content-center'>
+									<div class="card" style="width: 4rem;">
+			  							<img class="card-img-top" src="img/produtos/elephant_guide.jpeg" alt="Elephant Guide">
+									</div>
+								</div>
+							</td>
+						</div>
+						<div class='col-sm-4'>
+							<td class='align-middle'>
+								<p class='d-flex justify-content-center pt-4''>Elephant Guide</p>
+							</td>
+						</div>
+						<div class='col-sm-2'>
+							<td>
+								<div class='d-flex justify-content-center pt-4'>
+										<div class='input-group mb-3' style='max-width: 120px'>
+											<div class='input-group-prepend'>
+												<button class='btn btn-outline-primary js-btn-minus'>-</button>
+											</div>
+											<input type="text" class='form-control text-center' value='1' placeholder=''>
+											<div class='input-group-append'>
+												<button class='btn btn-outline-primary js-btn-minus'>+</button>
+											</div>
+										</div>
+									</div>
+							</td>
+						</div> 	
+						<div class='col-sm-2'>
+							<td class='align-middle'> 
+								<p class='d-flex justify-content-center pt-4''>R$ 10,00</p>
+							</td>
+						</div>
+						<div class='col-sm-1'>
+							<td class='my_btn_and_input_align'>
+								<div class='d-flex justify-content-center'>
+									<a href="" class='btn btn-primary btn-sm'>X</a>
+								</div>
+							</td>
+						</div>
+					</div>
+
+				</tr>
+
+				<tr>
+					<div class='row'>
+						<div class='col-sm-3'>
+							<td>
+								<div class='d-flex justify-content-center'>
+									<div class="card" style="width: 4rem;">
+			  							<img class="card-img-top" src="img/produto/epic_confrontation.jpeg" alt="Epic Confrontation">
+									</div>
+								</div>
+							</td>
+						</div>
+						<div class='col-sm-4'>
+							<td class='align-middle'>
+								<p class='d-flex justify-content-center pt-4''>Epic Confrontation</p>
+							</td>
+						</div>
+						<div class='col-sm-2'>
+								<td>
+									<div class='d-flex justify-content-center pt-4'>
+										<div class='input-group mb-3' style='max-width: 120px'>
+											<div class='input-group-prepend'>
+												<button class='btn btn-outline-primary js-btn-minus'>-</button>
+											</div>
+											<input type="text" class='form-control text-center' value='1' placeholder=''>
+											<div class='input-group-append'>
+												<button class='btn btn-outline-primary js-btn-minus'>+</button>
+											</div>
+										</div>
+									</div>
+								</td>
+						</div>
+						<div class='col-sm-2'>	
+							<td class='align-middle'> 
+								<p class='d-flex justify-content-center pt-4''>R$ 10,00</p>
+							</td>
+						</div>
+						<div class='col-sm-1'>
+							<td class='my_btn_and_input_align'>
+								<a href="" class='btn btn-primary btn-sm'>X</a>
+							</td>
+						</div>
+					</div> 
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+	 <footer  class='fixed-bottom' style="background-color: #4b1749">
+	        <div class="row justify-content-between m-0">
+	          <div class="col-sm-4 mt-2">
+	              <p style="color: orange"><b>Loja Destinada a Card Game</b></p>
+	          </div>           
+	          <div class="col-sm-4 align-self-center mt-2">
+	
+	             <p style="color: orange"><b>Formas de Pagamento</b></p>
+	              <img src="img/produtos/Formas-de-pagamento.png"style="width: 100%; height: 100px ">
+	          </div> 
+	       </div>
+	       <div class="row justify-content-between m-0" align="center">
+	       	<div class="col-sm-11" style="color: darkorange">
+	       	      Mistica Games ©. Todos os direitos reservados.
+	         
+	       	</div>
+	       </div>
+	  </footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
