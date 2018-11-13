@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<title>Cadastro</title>
+
+		<style type="text/css">
+
+			.btn-warning{
+				background-color: #ffa74a;
+				border-color: #a154a5;
+			}
+
+			.btn-warning:hover{
+				background-color: #a154a5;
+			}
+
+			#pwd input{
+				width: 55%;
+			}
+
+			h2{
+
+				color:  #a154a5;
+			}
+
+			#esqueci{
+
+				margin-left: 100px;
+				color: #a154a5;
+			}
+
+			.nuni{
+				background-color: #ffa74a;
+				border-color: #a154a5;
+			}
+
+			.nuni:hover{
+				background-color: #a154a5;
+			}
+
+		</style>
+
+	</head>
+	<body>
+
+		<header style="background-color: #4b1749">
+	        <div class="row justify-content-between m-0">
+	          <div class="col-sm-4 mt-2">
+	              <img src="img/logo-mistica.png" class="img-fluid" alt="gameStoreLogo" >
+	          </div>
+	          <div class="col-sm-4 align-self-center">
+	              <form class="form-inline ">
+	                  <input class="form-control mr-2 " type="search" placeholder="Buscar...">
+	                  <button class="btn btn-outline-light" type="submit">OK</button>
+	              </form>
+	          </div>
+	           
+	       </div>
+	   </header>    
+
+	   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3f133d">
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+	        <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbarSite">
+	              <ul class="navbar-nav mr-auto ml-auto">
+	                  <li class="nav-item">
+	                      <a class="nav-link" href="#">Home</a>
+	                  </li>
+	                  <li class="nav-item">
+	                      <a class="nav-link" href="#">Categorias</a>
+	                  </li>
+	                  <li class="nav-item">
+	                      <a class="nav-link" href="#">Sobre nós</a>
+	                  </li>
+	              </ul>           
+	         </div>  
+	    </nav>
+
+		<div class="container my-5"> 
+			<div class="row justify-content-between">
+				<div class="col-sm-5 mr-3">
+					<form>
+						<div class="form-group">
+							<h2>Area de login</h2>
+
+							<label for="email">Digite seu email</label>
+							<input type="email" class="form-control" id="email" placeholder="Digite o email cadastrado">
+
+							<label for="password">Digite sua senha</label>
+							<input type="text" class="form-control" id="senhaLogin" placeholder="Digite sua senha">
+
+							<div class="form-check mt-2">
+								<input type="checkbox" class="form-check-input" id="lembrarSenha"> 
+								<label for="password">Lembrar minha senha</label>
+								<a href="" id="esqueci">Esqueci minha senha</a>
+							</div>
+
+							<button type="submit" class="btn btn-warning text-white mt-3 mb-4" id="btnLogin">Entrar</button>
+
+							<div class="card text-white bg-warning mb-3" id="cardLogin" style="max-width: 18rem;">			  
+							     <div class="card-body nuni">
+							        <h5 class="card-title">Ainda não tem cadastro ?</h5>
+							        <p class="card-text">Cadastre-se e confira as promoções e novidades do site</p>
+							    </div>
+							</div>
+
+						</div>				
+					</form>
+			    </div><!-- div col -->
+
+				<div class="col-sm-5">
+					<form>		 
+						<h2>Area de Cadastro</h2>
+
+						 <div class="form-group">			 
+						    <label for="Name">Digite seu Nome:</label>			 
+						    <input type="text" class="form-control" id="name" aria-describedby="nomeAjuda" placeholder="Preencha com seu nome completo"> 
+						    <small id="nameAjuda" class="form-text text-muted">Preencha com o seu nome</small>			 
+						 </div>
+						 
+						 <div class="form-group">			 
+						    <label for="email">Digite seu Email:</label>
+						 
+						    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Digite seu email.Exemplo: exemplo@exemplo.com"> 
+						    <small id="emailHelp" class="form-text text-muted">Preencha com email válido</small>			 
+						 </div>
+						 
+						 <div id="pwd" class="form-group">			 
+						    <label for="password">Digite sua senha:</label>			 
+						    <input type="password" class="form-control" id="senha" aria-describedby="passHelp" placeholder="Senha"> 
+						    <small id="senha" class="form-text text-muted">Ela deve ter 8 caracteres</small>
+
+						    <label for="password">Confirme sua senha:</label>						   
+						    <input type="password" class="form-control" id="confirmaSenha" aria-describedby="senhaAjuda" placeholder="Confirme a senha">
+						    <small id="passHelp" class="form-text text-muted">Os caracteres digitados devem ser identicos ao campo a cima</small> 			 
+						 </div>
+						 
+						 <div class="form-check">
+						    <input type="checkbox" class="form-check-input" id="termos"> 
+						    <label class="form-check-label" for="check">Concordo com termos e condições</label>			 
+						 </div>
+						 
+						 <button type="submit" class="btn btn-warning text-white mt-3">Criar conta</button>
+						
+					</form> 
+				</div> <!--div col -->	
+			</div> <!--div row -->	
+	    </div> 
+
+	    <footer clssa="fixed-bottom" style="background-color: #4b1749">
+	        <div class="row justify-content-between m-0">
+	          <div class="col-sm-2 mt-2">
+	              <p style="color: orange"><b>Loja Destinada a Card Game</b></p>
+	          </div>   
+	                
+	          <div class="col-sm-4 mt-2" style="text-align: center">
+	              <div style="color: orange"><b>Fale conosco</b></div>
+	              <div style="color: orange">(xx) xxxx-xxxx</div>
+	              <div style="color: orange">misticaGames@mistica.br</div>
+	          </div>  
+	        
+	          <div class="col-sm-4">
+	             <p style="color: orange"><b>Formas de Pagamento</b></p>
+	              <img src="img/banner/pagamentos.png"style="width: 50%; height: 50px ">
+	          </div> 
+	   
+		       <div class="row justify-content-between m-0">
+		       <div class="col-sm-12" style="color: darkorange">
+		        Copyright © 2018:Produzido por Gabriela e Patricia. 
+	           </div>
+	          </div>
+	       </div>
+	   </footer>
+
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/
+		JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	</body>
+</html>
